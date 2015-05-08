@@ -1,7 +1,5 @@
 package com.waylau.spring.demo.beanScope;
 
-import java.util.concurrent.ScheduledThreadPoolExecutor;
-
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -27,13 +25,9 @@ public class App
         SpringBeanUtil.setContext(ctx);
         
         UserService userService = ctx.getBean(UserService.class);
-        userService.sayHello();
-        
-        for(int i=0; i<10; i++) {
-        	logger.info(userService.sayToDad("en"+i));
-        }
-        
-        userService.startTask();
+ 
+        userService.runPrototype();
+       // userService.startTask();
         
     }
 }

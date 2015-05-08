@@ -36,7 +36,6 @@ public class DadTask implements Runnable {
 	@Override
 	public void run() {
 		logger.info("DadTask:"+this + ";DadDao:"+dadDao + ";"+dadDao.sayHello(name) );
-		//logger.info("Dad:"+name);
 	}
 
 }
